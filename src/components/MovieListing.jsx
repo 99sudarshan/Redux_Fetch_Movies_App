@@ -9,7 +9,7 @@ const MovieListing = () => {
 
   let renderMovies = "";
   renderMovies = movies.Response === "True" ? (
-    <div className='grid grid-cols-4 px-4 gap-4 my-4' >
+    <div className='grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 px-4 gap-4 my-4' >
       {movies.Search.map((item, index) => {
         return <MovieCard item={item} key={index} />
       })}
@@ -22,7 +22,7 @@ const MovieListing = () => {
 
   let renderSeries = "";
   renderSeries = series.Response === "True" ? (
-    <div className='grid grid-cols-4 px-4 gap-4 my-4' >
+    <div className='grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 px-6 sm:px-4 gap-4 my-4' >
       {series.Search.map((item, index) => {
         return <MovieCard item={item} key={index} />
       })}
