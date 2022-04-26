@@ -1,3 +1,6 @@
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -6,4 +9,25 @@
         background:linear-gradient(to right, rgb(209, 126, 32), rgb(10, 116, 102));
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
+}
+
+
+.slick-next{
+        @apply right-0
+}
+
+.slick-prev{
+        @apply left-0 z-10 
+}
+
+.slick-slide{
+        @apply w-80
+}
+
+.slick-list{
+        @apply py-4
+}
+
+.slick-slider{
+        @apply h-[31rem]
 }
