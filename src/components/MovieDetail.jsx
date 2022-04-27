@@ -7,7 +7,6 @@ const MovieDetail = () => {
   const dispatch = useDispatch();
   const { imdbID } = useParams();
   const data = useSelector(getSeriesOrMovieDetail);
-  console.log(data);
 
   useEffect(() => {
     dispatch(fetchAsyncMovieOrSeriesDetail(imdbID));
@@ -20,10 +19,10 @@ const MovieDetail = () => {
     <>
       {
         Object.keys(data).length === 0 ? (
-          <div className="text-white text-center py-8">...Loading</div>
+          <div className="text-white text-center py-12">...Loading</div>
         ) :
           (
-            <div className='flex flex-col justify-center py-2 lg:flex-row lg:justify-between items-center flex-wrap sm:p-5'>
+            <div className='flex flex-col justify-center pt-12 pb-2 lg:flex-row lg:justify-between items-center flex-wrap sm:p-5'>
               <div className='w-3/4 px-4'>
                 <h1 className='text-white text-xl sm:text-4xl font-medium tracking-wide'> {data.Title}</h1>
                 <div className='py-4 flex flex-wrap items-center gap-5'>
